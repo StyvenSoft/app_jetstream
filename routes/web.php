@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// Importar vistas para controlar
+use Illuminate\Support\Facades\View;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,3 +59,21 @@ Route::get('/route2', function () {
 Route::get('/user/{id}', function ($id) {
     return 'The user id is: '. $id;
 })->where('id', '[0-9]+');
+
+// Creando vistas
+
+Route::get('/view', function () {
+    return view('view', ['name'=>'Steveen']);
+});
+
+// Control de vistas 'Fachadas'
+
+if (View::exists('view2')) {
+    Route::get('view', function () {
+        return view('view2');
+    });
+} else {
+    Route::get('view2', function () {
+        return 'The view not exists!';
+    });
+};
