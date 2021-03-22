@@ -15,9 +15,12 @@ use Illuminate\Support\Facades\View;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Cambiando ruta principal desde controlador
+Route::get('/', 'App\Http\Controllers\HomeController@index');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
