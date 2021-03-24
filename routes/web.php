@@ -20,7 +20,11 @@ use Illuminate\Support\Facades\View;
 // });
 
 // Cambiando ruta principal desde controlador
-Route::get('/', 'App\Http\Controllers\HomeController@index');
+// Route::get('/', 'App\Http\Controllers\HomeController@index');
+
+// Actualización de ruta para el controlador creado Person
+
+Route::resource('/persons', 'App\Http\Controllers\PersonController');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

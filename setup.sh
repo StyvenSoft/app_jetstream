@@ -21,3 +21,12 @@ php artisan make:controller NameController
 # Crear controlador CRUD completo
 
 php artisan make:controller CrudController --resource
+
+# Comando para crear una Tabla
+
+php artisan make:migration create_name_table
+
+
+# Creando modelos de clase
+
+php artisan make:model Name
