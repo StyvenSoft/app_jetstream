@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\View;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Cambiando ruta principal desde controlador
 // Route::get('/', 'App\Http\Controllers\HomeController@index');
@@ -84,3 +84,8 @@ if (View::exists('view2')) {
         return 'The view not exists!';
     });
 };
+
+// Vista usando una plantilla nueva blade
+Route::get('/cards', function () {
+    return view('cards');
+});
