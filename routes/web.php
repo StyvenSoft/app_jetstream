@@ -93,5 +93,6 @@ Route::get('/cards', function () {
 // Segunga ruta creada dede plantilla blade
 
 Route::get('/form', function () {
-    return view('form');
+    $users = ['Marcos', 'Pedro', 'Lucas', 'Antonio'];
+    return view('form')->with('users', $users);
 });

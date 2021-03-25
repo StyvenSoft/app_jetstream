@@ -9,4 +9,20 @@
   <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 </div>
+
+<!-- Ejemplo de ciclo for -->
+
+<ul>
+    @for ($i = 0; $i <= 10; $i++)
+        <li>El valor de actual es: {{$i}}</li>
+    @endfor
+</ul>
+
+<!-- Ejemplo ciclo forech extrayendo datos Users -->
+
+<ul>
+    @foreach ($users as $user)
+        <li>{{ $user }}</li>
+    @endforeach
+</ul>
 @endsection
