@@ -89,3 +89,9 @@ if (View::exists('view2')) {
 Route::get('/cards', function () {
     return view('cards');
 });
+
+// Segunga ruta creada dede plantilla blade
+
+Route::get('/form', function () {
+    return view('form');
+});
