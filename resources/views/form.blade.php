@@ -10,6 +10,16 @@
   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 </div>
 
+<!-- Ejemplo de condicional If -->
+
+@if (count($users) === 1)
+  <span class="badge">1 Elemento dentro del array usuarios</span>
+@elseif (count($users) > 1)
+  <span class="badge bg-success">Varios elementos dentro del array</span>
+@else
+  <span class="badge">No hay elementos</span>
+@endif
+
 <!-- Ejemplo de ciclo for -->
 
 <ul>
@@ -25,4 +35,4 @@
         <li>{{ $user }}</li>
     @endforeach
 </ul>
-@endsection
+@endsection  
