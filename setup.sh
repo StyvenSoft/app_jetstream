@@ -30,3 +30,9 @@ php artisan make:migration create_name_table
 # Creando modelos de clase
 
 php artisan make:model Name
+
+# Instalar dashboard laravel admin LTE
+
+composer require jeroennoten/laravel-adminlte
+
+php artisan adminlte:install

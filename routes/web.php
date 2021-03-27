@@ -26,9 +26,9 @@ Route::get('/', function () {
 
 Route::resource('/persons', 'App\Http\Controllers\PersonController');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dash', function () {
+    return view('dash.index');
+})->name('dash');
 
 // Retornando text de prueba
 Route::get('/text', function () {
