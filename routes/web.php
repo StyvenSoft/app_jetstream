@@ -19,6 +19,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Ejemplo de ruta para una vista
+
+// Route::get('/dash/crud', function () {
+//     return view('crud.index');
+// });
+
 // Cambiando ruta principal desde controlador
 // Route::get('/', 'App\Http\Controllers\HomeController@index');
 
@@ -96,3 +102,5 @@ Route::get('/form', function () {
     $users = ['Marcos', 'Pedro', 'Lucas', 'Antonio'];
     return view('form')->with('users', $users);
 });
+
+Route::resource('products', 'App\Http\Controllers\ProductController');

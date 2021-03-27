@@ -36,3 +36,7 @@ php artisan make:model Name
 composer require jeroennoten/laravel-adminlte
 
 php artisan adminlte:install
+
+# Crear un modelo más la migración de la tabla
+
+php artisan make:model Name -m
