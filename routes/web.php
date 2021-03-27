@@ -103,4 +103,4 @@ Route::get('/form', function () {
     return view('form')->with('users', $users);
 });
 
-Route::resource('products', 'App\Http\Controllers\ProductController');
+Route::resource('/products', 'App\Http\Controllers\ProductController');
